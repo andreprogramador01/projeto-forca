@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+.Jogo{
+    display: flex;
+}
+.topo{
+    display: flex;
+}
+.imgForca{
+    width: 400px;
+}
+.escolher{
+    flex-direction: column;
+}
+.escolher-palavra{
+    width: 200px;
+    height: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #27ae60;
+    color:#FFFFFF;
+    margin-left:334px;
+    margin-top: 89px;
+}
+.palavra{
+    display: flex;
+    height: 15px;
+    margin-left:203px;
+    margin-top:282px;
+    
+
+}
+.letra{
+    border-bottom: 1px solid black;
+    width: 10px;
+    margin-left:10px;
+}
+.Letras button{
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+    margin-right:12px;
+    width: 40px;
+    height: 40px;
+    margin-bottom:10px;
+}
+.Letras{
+    width: 680px;
+    margin-left:211px;
+}
+.Chute{
+    margin-top:56px;
+    display: flex;
+    margin-left:231px;
+}
+.Chute span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.Chute input{
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    width: 353px;
+    height: 40px;
+    margin-left:12px;
+}
+.Chute button{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-left:15px;
+    
+    color: #3C76A1;
+}
