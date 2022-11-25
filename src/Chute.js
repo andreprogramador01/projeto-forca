@@ -1,8 +1,8 @@
-export default function Chute(){
+export default function Chute(props){
     return(
         <div className="Chute">
             <span>Já sei a palavra! </span> <input type="text"></input>
-            <button>Chutar</button>
+            <button disabled={props.desabilitado ? false : true}>Chutar</button>
         </div>
     )
 }

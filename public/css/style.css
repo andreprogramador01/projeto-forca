@@ -39,7 +39,7 @@
 
 }
 .letra{
-    border-bottom: 1px solid black;
+
     width: 10px;
     margin-left:10px;
 }
@@ -92,4 +92,8 @@
     margin-left:15px;
     
     color: #3C76A1;
+}
+.desabilitado{
+    cursor:not-allowed;
+    opacity:0.65;
 }

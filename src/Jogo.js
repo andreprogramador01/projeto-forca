@@ -1,25 +1,32 @@
-export default function Jogo(){
+export default function Jogo(props){
+    let errouALetra = false;
+    
+    function habilitarLetras(){
+        props.setDesabilitado(true);
+    }
+    
+    
     return(
         <>  
             <div className="Jogo">
 
                 <div className="topo">
-                    <img className="imgForca" src="./assets/forca0.png" />
+                    <img className="imgForca" src={props.forcaImagem} />
                     
                     
                 </div>
                 <div className="escolher">
-                    <button className="escolher-palavra">Escolher Palavra</button>
+                    <button className="escolher-palavra" onClick={habilitarLetras}>Escolher Palavra</button>
                     <ul className="palavra">
-                        <li className="letra">
+                        {[...props.palavra].map((p, index) =>(
+                        
+                        <li key={index} className={"letra"}>
+                            {props.letraCorreta(p) ? p : "_"}
                         </li>
-                        <li className="letra">
-                        a 
-                        </li>
-                        <li className="letra">
-                            a
-                        </li>
-
+                        ))}
+                        
+                        
+                        
                     </ul>            
                 </div>
             </div>
