@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styled from "styled-components";
 
 
 
@@ -10,6 +11,7 @@ export default function Letras(props){
         if(![...props.palavra].includes(letra)){
             novoContador = props.contadorErros + 1
             props.setContadorErros(novoContador)
+            props.imagemForca(novoContador);
         }else{
             props.setAcertos([...props.acertos,letra]);
             const arr3 = [...props.palavra].filter( x => { 
@@ -26,11 +28,11 @@ export default function Letras(props){
             
             props.setListaLetraDesabilitada(novoArray);
         }
-        props.imagemForca(novoContador);
+        
       }
     
     return(
-        <div className="Letras">
+        <Letras1>
             {props.alfabeto.map(letra=>(
                 <button disabled={!props.listaLetraDesabilitada.includes(letra) && props.desabilitado ? false:true} 
                         className={letra}  
@@ -43,6 +45,22 @@ export default function Letras(props){
                 </button>
             ))}
            
-        </div>
+        </Letras1>
     )
 }
+
+const Letras1 = styled.div`
+    width: 680px;
+    margin-left:211px;
+    button{
+        background: #E1ECF4;
+        border: 1px solid #7AA7C7;
+        border-radius: 3px;
+        margin-right:12px;
+        width: 40px;
+        height: 40px;
+        margin-bottom:10px;
+    }
+}
+
+`

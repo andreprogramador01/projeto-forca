@@ -1,3 +1,4 @@
+import styled from "styled-components"
 
 export default function Jogo(props){
     
@@ -5,7 +6,7 @@ export default function Jogo(props){
     
     return(
         <>  
-            <div className="Jogo">
+            <Jogo1>
 
                 <div className="topo">
                     <img className="imgForca" data-test="game-image" src={props.forcaImagem} />
@@ -30,10 +31,53 @@ export default function Jogo(props){
                         
                     </ul>            
                 </div>
-            </div>
+            </Jogo1>
             
 
         </>
     )
 
 }
+
+const Jogo1 = styled.div`
+    display: flex;
+    .topo{
+        display: flex;
+    }
+    .imgForca{
+        width: 400px;
+    }
+    .escolher{
+    flex-direction: column;
+    }
+    .escolher-palavra{
+        width: 200px;
+        height: 60px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #27ae60;
+        color:#FFFFFF;
+        margin-left:334px;
+        margin-top: 89px;
+    }
+    .palavra{
+        display: flex;
+        height: 15px;
+        margin-left:203px;
+        margin-top:282px;
+        
+
+    }
+    .letra{
+        width: 10px;
+        margin-left:10px;
+    }
+
+`

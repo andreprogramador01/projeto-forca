@@ -3,7 +3,7 @@ import Letras from "./Letras"
 import Chute from "./Chute";
 import palavras from "./palavras";
 import { useState } from "react";
-
+import GlobalStyle from "./styles/globalStyle";
 
 
 export default function App() {
@@ -108,6 +108,7 @@ export default function App() {
               chutar={chutar}
               
               />
+        <GlobalStyle/>
     </div>
   );
 }
